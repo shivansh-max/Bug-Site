@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$useless: #000000;
+$weird: #fffe00;
+$fill: #a972cb;
+$pulse: #ef6eae;
+$close: #ff7f82;
+$raise: #ffa260;
+$up: #e4cb58;
+$slide: #8fc866;
+$free-guy: #00ffb7;
+$exhilarated: #ff00b7;
+$chandler: #ff8c00;
+$mr-beast: #00a6ff;
+$bobersen : #8c00ff;
+
+.fill-c { color: $free-guy; }
+
+.bottom {
+  margin-top: 40px;
+}
+
+body {
+  background: $useless;
+  font-family: 'Roboto', sans-serif;
+  color: $weird;
+}
+
+body, ul, li, h1, h2, h3, h4, h5, h6, div, p {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.bar {
+  display: flex;
+  list-style: none;
+
+  li.minibar {
+    width: calc(100vw / 5);
+    height: 2vh;
+
+  }
+
+  .fill { background-color: $fill; }
+  .pulse { background-color: $pulse; }
+  .close { background-color: $close; }
+  .raise { background-color: $raise; }
+  .up { background-color: $up; }
+  .slide { background-color: $slide; }
+}
+
+.title {
+  font-size: 10vh;
+  margin: 2vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+
+  .menu {
+    margin-top: 5vh;
+    width: 90vw;
+
+    .pods {
+      color: $exhilarated;
+
+      .pod {
+        color: $chandler;
+        border: 2px solid $free-guy;
+        border-radius: 2px;
+        transition: 250ms ease-in-out;
+        display: flex;
+        margin-top: 10px;
+
+        &:hover {
+          border-color: $up;
+        }
+
+        .seg {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          width: 25%;
+
+          h5, p {
+            color: $fill;
+          }
+        }
+      }
+    }
+
+    .question {
+      .q {
+        color: $bobersen;
+        margin-top: 10px;
+        font-size: 1.5rem;
+      }
+
+      .a {
+        color: $mr-beast;
+      }
+    }
+  }
+}
+
+.buy {
+  @include center;
+
+  justify-content: flex-end;
+
+  button, h1 {
+    margin: 2vh;
+  }
+
+  button {
+    color: $mr-beast;
+    border: 2px solid $mr-beast;
+    background-color: transparent;
+    border-radius: 2px;
+    height: 4vh;
+    width: 6vw;
+  }
+
+  h1 {
+    color: $mr-beast;
+  }
+}
